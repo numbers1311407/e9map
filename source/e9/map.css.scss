@@ -15,7 +15,7 @@ $height: 375px;
 
   .overlays {
     &, .cc {
-      background: image-url("map.png") no-repeat;
+      background: url("images/map.png") no-repeat;
       width: $width;
       height: $height;
     }
@@ -52,7 +52,7 @@ $height: 375px;
     .content { display: none; }
 
     .btn {
-      background: image-url("buttons.png") no-repeat;
+      background: url("images/buttons.png") no-repeat;
       height: 17px;
       line-height: 17px;
       padding: 0;
@@ -116,7 +116,7 @@ $height: 375px;
       margin: 0 0 1em;
     }
     .popover-middle, .popover-middle-inner, .popover-left, .popover-right {
-      background: image-url('corners.png') scroll no-repeat;
+      background: url('images/corners.png') scroll no-repeat;
     }
     .popover-middle {
       background-position: right -17px;
