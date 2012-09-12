@@ -1,0 +1,166 @@
+$width: 700px;
+$height: 375px;
+
+#e9map {
+  position: relative;
+  overflow: hidden;
+  width: $width;
+  height: $height;
+
+  .cc, .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .overlays {
+    &, .cc {
+      background: image-url("map.png") no-repeat;
+      width: $width;
+      height: $height;
+    }
+
+    @mixin pos($row, $col, $rt: 0, $ct: 0) {
+      background-position: ($col * $width * -1 + $ct) ($row * $height * -1 + $rt);
+    }
+
+    .ar { @include pos(0, 1); }
+    .au { @include pos(0, 2); }
+    .br { @include pos(0, 3); }
+    .bg { @include pos(1, 0); }
+    .ca { @include pos(1, 1); }
+    .co { @include pos(1, 2); }
+    .hr { @include pos(1, 3); }
+    .hk { @include pos(2, 0); }
+    .in { @include pos(2, 1); }
+    .lam { @include pos(2, 2); }
+    .my { @include pos(2, 3); }
+    .mx { @include pos(3, 0); }
+    .ph { @include pos(3, 1); }
+    .rs { @include pos(3, 2); }
+    .sg { @include pos(3, 3); }
+    .si { @include pos(4, 0); }
+    .th { @include pos(4, 1); }
+    .gb { @include pos(4, 2); }
+    .us { @include pos(4, 3); }
+    .ve { @include pos(5, 0); }
+    .vn { @include pos(5, 1); }
+  }
+
+  .data {
+    // hide the content tooltips
+    .content { display: none; }
+
+    .btn {
+      background: image-url("buttons.png") no-repeat;
+      height: 17px;
+      line-height: 17px;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      cursor: pointer;
+      text-indent: -999em;
+    }
+
+    @mixin btn($width: 0, $bgleft: 0) {
+      background-position: $bgleft 0;
+      width: $width;
+      &.hover, &:hover {
+        background-position: $bgleft -17px;
+      }
+    }
+
+    // calculate the `left` of each button's background after each
+    // rule, using the width.  Looks ugly but it's easier and more
+    // precies than keeping track of both numbers.
+    $l: 0;       $w: 89px;  .ar  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 82px;  .au  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 67px;  .br  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 79px;  .bg  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 75px;  .ca  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 87px;  .co  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 73px;  .hr  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 96px;  .hk  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 60px;  .in  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 111px; .lam .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 81px;  .my  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 72px;  .mx  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 97px;  .ph  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 68px;  .rs  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 91px;  .sg  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 80px;  .si  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 81px;  .th  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 123px; .gb  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 110px; .us  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 92px;  .ve  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 79px;  .vn  .btn { @include btn($w, $l); }
+  }
+
+  $popover-h-padding: 15px;
+  $popover-v-padding: 5px;
+
+  .popover {
+    position: absolute;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #666;
+    .popover-content {
+      overflow: hidden;
+    }
+    p {
+      margin: 0 0 1em;
+    }
+    .popover-middle, .popover-middle-inner, .popover-left, .popover-right {
+      background: image-url('corners.png') scroll no-repeat;
+    }
+    .popover-middle {
+      background-position: right -17px;
+      padding: 0 $popover-h-padding 0 0;
+    }
+    .popover-middle-inner {
+      background-position: left -17px;
+      padding: $popover-v-padding 0 $popover-v-padding $popover-h-padding;
+    }
+    .popover-left, .popover-right {
+      height: inherit;
+      width: 50%;
+      float: left;
+    }
+    .popover-top {
+      .popover-left { background-position: top left; }
+      .popover-right { background-position: top right; }
+    }
+    .popover-bottom {
+      .popover-left { background-position: bottom left; }
+      .popover-right { background-position: bottom right; }
+    }
+    .popover-top, .popover-bottom {
+      overflow: hidden;
+      height: 14px;
+    }
+  }
+
+  .popover-dismiss {
+    &:focus { outline: none; }
+    display: block;
+    text-decoration: none;
+    line-height: 20px;
+    color: #999;
+    font-size: 15px;
+    &:hover { color: #333; }
+    cursor: pointer;
+    overflow: hidden;
+    span {
+      float: left;
+      margin-right: 8px;
+      font-family: Arial;
+      font-weight: bold;
+    }
+    span.popover-x {
+      font-family: "Arial Black";
+      font-weight: normal;
+      font-size: 18px;
+      display: block;
+    }
+  }
+}
