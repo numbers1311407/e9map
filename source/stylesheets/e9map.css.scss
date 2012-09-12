@@ -101,9 +101,14 @@ $height: 375px;
 
   .popover {
     position: absolute;
-    font-size: 13px;
-    line-height: 1.4;
-    color: #666;
+    &, td {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.4;
+    }
+    td {
+      padding: 5px;
+    }
     .popover-content {
       overflow: hidden;
     }
@@ -131,12 +136,13 @@ $height: 375px;
       .popover-right { background-position: top right; }
     }
     .popover-bottom {
+      clear: both;
       .popover-left { background-position: bottom left; }
       .popover-right { background-position: bottom right; }
     }
     .popover-top, .popover-bottom {
       overflow: hidden;
-      height: 14px;
+      height: 15px;
     }
   }
 
@@ -144,6 +150,7 @@ $height: 375px;
     &:focus { outline: none; }
     display: block;
     text-decoration: none;
+    height: 20px;
     line-height: 20px;
     color: #999;
     font-size: 15px;
