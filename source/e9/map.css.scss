@@ -1,5 +1,7 @@
 $width: 700px;
 $height: 375px;
+$font-color: #666;
+$font-size: 13px;
 
 #e9map {
   position: relative;
@@ -101,19 +103,20 @@ $height: 375px;
 
   .popover {
     position: absolute;
-    &, td {
+    &, td, h2 {
       font-size: 13px;
       color: #666;
       line-height: 1.4;
     }
     td {
-      padding: 5px;
+      padding: 0 10px 10px 0;
+    }
+    h2, p {
+      margin: 0 0 .5em;
+      padding: 0;
     }
     .popover-content {
       overflow: hidden;
-    }
-    p {
-      margin: 0 0 1em;
     }
     .popover-middle, .popover-middle-inner, .popover-left, .popover-right {
       background: url('images/corners.png') scroll no-repeat;
