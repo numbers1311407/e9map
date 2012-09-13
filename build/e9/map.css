@@ -67,10 +67,10 @@
 #e9map .data .vn .btn { background-position: -1714px 0; width: 79px; }
 #e9map .data .vn .btn.hover, #e9map .data .vn .btn:hover { background-position: -1714px -17px; }
 #e9map .popover { position: absolute; }
-#e9map .popover, #e9map .popover td { font-size: 13px; color: #666; line-height: 1.4; }
-#e9map .popover td { padding: 5px; }
+#e9map .popover, #e9map .popover td, #e9map .popover h2 { font-size: 13px; color: #666; line-height: 1.4; }
+#e9map .popover td { padding: 0 10px 10px 0; }
+#e9map .popover h2, #e9map .popover p { margin: 0 0 .5em; padding: 0; }
 #e9map .popover .popover-content { overflow: hidden; }
-#e9map .popover p { margin: 0 0 1em; }
 #e9map .popover .popover-middle, #e9map .popover .popover-middle-inner, #e9map .popover .popover-left, #e9map .popover .popover-right { background: url("images/corners.png") scroll no-repeat; }
 #e9map .popover .popover-middle { background-position: right -17px; padding: 0 15px 0 0; }
 #e9map .popover .popover-middle-inner { background-position: left -17px; padding: 5px 0 5px 15px; }
