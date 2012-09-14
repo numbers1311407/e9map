@@ -47,6 +47,7 @@ $font-size: 13px;
     .us { @include pos(4, 3); }
     .ve { @include pos(5, 0); }
     .vn { @include pos(5, 1); }
+    .es { @include pos(5, 2); }
   }
 
   .data {
@@ -96,6 +97,7 @@ $font-size: 13px;
     $l: $l - $w; $w: 110px; .us  .btn { @include btn($w, $l); }
     $l: $l - $w; $w: 92px;  .ve  .btn { @include btn($w, $l); }
     $l: $l - $w; $w: 79px;  .vn  .btn { @include btn($w, $l); }
+    $l: $l - $w; $w: 62px;  .es  .btn { @include btn($w, $l); }
   }
 
   $popover-h-padding: 15px;

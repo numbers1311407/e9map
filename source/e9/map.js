@@ -73,15 +73,15 @@ $(function() {
   $("#e9map .data > div").each(function() {
     var el = $(this), 
         css = el.attr('class'), 
-        content = el.find('.content');
+        content = el.find('.content'),
+        x = el.attr('data-x') || 0,
+        y = el.attr('data-y') || 0;
 
     // setting up each country's button
     var btn = $('<div class="btn">'+css+'</div>')
       // position it on the map
-      .css({
-        left: el.attr('data-x') || 0,
-        top: el.attr('data-y') || 0
-      })
+      .css({ 'left': x+'px', 'top': y+'px' })
+
       // hover behavior, which is to remove overlays
       // not belonging to this button, and add its own
       .hover(
@@ -119,6 +119,8 @@ $(function() {
       })
       // finally append it to the element
       .appendTo(el);
+
+      console.log(btn)
   });
 
   // open external rel'd links in new window
