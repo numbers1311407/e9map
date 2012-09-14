@@ -22,6 +22,7 @@
 #e9map .overlays .us { background-position: -2100px -1500px; }
 #e9map .overlays .ve { background-position: 0px -1875px; }
 #e9map .overlays .vn { background-position: -700px -1875px; }
+#e9map .overlays .es { background-position: -1400px -1875px; }
 #e9map .data .content { display: none; }
 #e9map .data .btn { background: url("images/buttons.png") no-repeat; height: 17px; line-height: 17px; padding: 0; margin: 0; border: 0; cursor: pointer; text-indent: -999em; }
 #e9map .data .ar .btn { background-position: 0 0; width: 89px; }
@@ -66,6 +67,8 @@
 #e9map .data .ve .btn.hover, #e9map .data .ve .btn:hover { background-position: -1622px -17px; }
 #e9map .data .vn .btn { background-position: -1714px 0; width: 79px; }
 #e9map .data .vn .btn.hover, #e9map .data .vn .btn:hover { background-position: -1714px -17px; }
+#e9map .data .es .btn { background-position: -1793px 0; width: 62px; }
+#e9map .data .es .btn.hover, #e9map .data .es .btn:hover { background-position: -1793px -17px; }
 #e9map .popover { position: absolute; }
 #e9map .popover, #e9map .popover td, #e9map .popover h2 { font-size: 13px; color: #666; line-height: 1.4; }
 #e9map .popover td { padding: 0 10px 10px 0; }
