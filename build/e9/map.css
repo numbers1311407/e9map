@@ -70,9 +70,11 @@
 #e9map .data .es .btn { background-position: -1793px 0; width: 62px; }
 #e9map .data .es .btn.hover, #e9map .data .es .btn:hover { background-position: -1793px -17px; }
 #e9map .popover { position: absolute; }
-#e9map .popover, #e9map .popover td, #e9map .popover h2 { font-size: 13px; color: #666; line-height: 1.4; }
+#e9map .popover, #e9map .popover td, #e9map .popover h2 { font-family: Arial; color: #666; line-height: 1.4; }
+#e9map .popover, #e9map .popover td { font-size: 13px; }
+#e9map .popover h2, #e9map .popover .popover-dismiss { font-size: 15px; font-weight: bold; }
 #e9map .popover td { padding: 0 10px 10px 0; }
-#e9map .popover h2, #e9map .popover p { margin: 0 0 .5em; padding: 0; }
+#e9map .popover h2, #e9map .popover p { margin: 0 0 10px; padding: 0; }
 #e9map .popover .popover-content { overflow: hidden; }
 #e9map .popover .popover-middle, #e9map .popover .popover-middle-inner, #e9map .popover .popover-left, #e9map .popover .popover-right { background: url("images/corners.png") scroll no-repeat; }
 #e9map .popover .popover-middle { background-position: right -17px; padding: 0 15px 0 0; }
@@ -84,8 +86,8 @@
 #e9map .popover .popover-bottom .popover-left { background-position: bottom left; }
 #e9map .popover .popover-bottom .popover-right { background-position: bottom right; }
 #e9map .popover .popover-top, #e9map .popover .popover-bottom { overflow: hidden; height: 15px; }
-#e9map .popover-dismiss { display: block; text-decoration: none; height: 20px; line-height: 20px; color: #999; font-size: 15px; cursor: pointer; overflow: hidden; }
+#e9map .popover-dismiss { display: block; text-decoration: none; height: 20px; line-height: 20px; color: #999; cursor: pointer; overflow: hidden; }
 #e9map .popover-dismiss:focus { outline: none; }
 #e9map .popover-dismiss:hover { color: #333; }
-#e9map .popover-dismiss span { float: left; margin-right: 8px; font-family: Arial; font-weight: bold; }
-#e9map .popover-dismiss span.popover-x { font-family: "Arial Black"; font-weight: normal; font-size: 18px; display: block; }
+#e9map .popover-dismiss span { float: left; margin-right: 5px; font-weight: bold; }
+#e9map .popover-dismiss span.popover-x { font-weight: bold; display: block; }
