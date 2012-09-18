@@ -119,8 +119,6 @@ $(function() {
       })
       // finally append it to the element
       .appendTo(el);
-
-      console.log(btn)
   });
 
   // open external rel'd links in new window
