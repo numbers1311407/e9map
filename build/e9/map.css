@@ -1,6 +1,6 @@
 #e9map { position: relative; overflow: hidden; width: 700px; height: 375px; }
 #e9map .cc, #e9map .btn { position: absolute; top: 0; left: 0; }
-#e9map .overlays, #e9map .overlays .cc { background: url("images/map.png") no-repeat; width: 700px; height: 375px; }
+#e9map .overlays, #e9map .overlays .cc { background: url("images/map2.png") no-repeat; width: 700px; height: 375px; }
 #e9map .overlays .ar { background-position: -700px 0px; }
 #e9map .overlays .au { background-position: -1400px 0px; }
 #e9map .overlays .br { background-position: -2100px 0px; }
